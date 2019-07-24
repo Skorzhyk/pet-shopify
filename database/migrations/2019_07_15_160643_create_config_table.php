@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMessagesTable extends Migration
+class CreateConfigTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,18 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('config', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('email');
-            $table->string('phone');
-            $table->text('message');
+            $table->string('config');
+            $table->string('value');
         });
+
+        DB::table('config')->insert(
+            [
+                'config' => 'admin_email',
+                'value' => 'skorzhyk@gmail.com'
+            ]
+        );
     }
 
     /**
@@ -30,6 +34,6 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('config');
     }
 }

@@ -1,0 +1,37 @@
+.dl-horizontal dt {
+    text-align: left;
+    width: auto;
+}
+
+.dl-horizontal dd {
+    margin-left: 100px;
+}
+
+.container {
+    margin-left: 2%;
+}
+
+#admin-email-form {
+    padding-left: 0;
+}
+
+#admin-email-form .form-group {
+    width: 35%;
+    float: left;
+    padding-right: 15px;
+}
+
+#filter {
+    margin-bottom: 15px;
+}
+
+.filter-box {
+    width: 100%;
+    display: inline-block;
+}
+
+.filter-box .form-group {
+    width: 30%;
+    float: left;
+    padding-right: 15px;
+}

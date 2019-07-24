@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('messages', 'MessagesController@index');
-Route::get('messages/{task}', 'MessagesController@show');
+Route::get('/', 'MessagesController@index');
+Route::post('messages/save', 'MessagesController@save');
+Route::post('messages/respond/{message}', 'MessagesController@respond');
+Route::get('messages/{message}', 'MessagesController@show');
 
 Route::get('auth', 'AuthController@install');
 Route::get('auth/callback', 'AuthController@callback');
+
+Route::post('config/save', 'ConfigController@save');
