@@ -20,6 +20,7 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->text('message');
+            $table->string('site_id');
         });
     }
 

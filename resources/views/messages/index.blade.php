@@ -29,6 +29,9 @@
                 <div class="form-group">
                     <input type="text" name="filter[email]" class="form-control" placeholder="Email" value="{{ $filter['email'] or '' }}">
                 </div>
+                <div class="form-group">
+                    <input type="text" name="filter[site_id]" class="form-control" placeholder="Site" value="{{ $filter['site_id'] or '' }}">
+                </div>
             </div>
 
             <button type="submit" class="btn btn-primary">Apply Filters</button>
@@ -43,6 +46,7 @@
                 <th data-field="last_name">Last Name</th>
                 <th data-field="email">Email</th>
                 <th data-field="phone">Phone</th>
+                <th data-field="site_id">Site</th>
             </tr>
         </thead>
         <tbody>
@@ -53,6 +57,7 @@
                         <td>{{ $message->last_name }}</td>
                         <td>{{ $message->email }}</td>
                         <td>{{ $message->phone }}</td>
+                        <td>{{ $message->site_id }}</td>
                     </tr>
             @endforeach
         </tbody>

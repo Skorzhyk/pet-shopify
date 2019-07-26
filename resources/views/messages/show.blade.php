@@ -16,6 +16,9 @@
 
                     <dt>Email</dt>
                     <dd>{{ $message->email }}</dd>
+
+                    <dt>Site</dt>
+                    <dd>{{ $message->site_id }}</dd>
                 </dl>
                 <dl>
                     <dt>Message</dt>

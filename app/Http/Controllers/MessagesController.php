@@ -7,6 +7,7 @@ use App;
 use Illuminate\Support\Facades\DB;
 use Session;
 use Mail;
+use URL;
 
 class MessagesController extends Controller
 {
@@ -68,6 +69,7 @@ class MessagesController extends Controller
     public function save(Request $request)
     {
         $data = $request->get('contact');
+        $data['site_id'] = parse_url(URL::previous(), PHP_URL_HOST);
 
         $message = new App\Message($data);
 
